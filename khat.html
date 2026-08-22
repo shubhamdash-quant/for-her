@@ -19,15 +19,28 @@
       color: white;
       font-size: 28px;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+      padding: 0 20px;
+    }
+    audio {
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
   <div>
-    <h1>Tap play, love 🎵</h1>
-    <audio controls autoplay>
+    <h1 id="heading">Tap play, love 🎵</h1>
+    <audio id="player" controls autoplay playsinline>
       <source src="Navjot Ahuja - Khat (Official Audio).mp3" type="audio/mpeg">
     </audio>
   </div>
+
+  <script>
+    const audio = document.getElementById('player');
+    const heading = document.getElementById('heading');
+
+    audio.play().catch(() => {
+      heading.textContent = "Tap the play button 💕";
+    });
+  </script>
 </body>
 </html>
