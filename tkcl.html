@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arz Kiya Hai</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: sans-serif;
+      text-align: center;
+    }
+    h1 {
+      color: white;
+      font-size: 28px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+      padding: 0 20px;
+    }
+    audio {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1 id="heading">I love you so much ❤️ </h1>
+    <audio id="player" controls autoplay playsinline>
+      <source src="tkcl.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script>
+    const audio = document.getElementById('player');
+    const heading = document.getElementById('heading');
+
+    audio.play().catch(() => {
+      heading.textContent = "You are my forever and ever and ever. You will never be REPLACED. EVER❤️ ";
+    });
+  </script>
+</body>
+</html>
